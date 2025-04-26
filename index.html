@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Personal portfolio Website</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="style.css">
+    <script src="https://kit.fontawesome.com/cd13c9cf62.js" crossorigin="anonymous"></script>
+    <style>
+        /* === Mobile-Only Icons === */
+        .mobile-menu-icon {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .mobile-menu-icon {
+                display: block;
+                font-size: 25px;
+                color: white;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+
+            nav ul {
+                position: fixed;
+                right: -200px;
+                top: 0;
+                width: 200px;
+                height: 100vh;
+                background: #111;
+                padding-top: 60px;
+                transition: 0.3s;
+                z-index: 10;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="fa-solid fa-times mobile-menu-icon" id="close-icon" onclick="closemenu()"></i>
+                <i class="fa-solid fa-bars mobile-menu-icon" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'm <span>Gunjan</span><br>From Pune</h1>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am a motivated Junior Software Developer with hands-on experience in building dynamic
+                            applications using Java and Spring frameworks. I excel in implementing RESTful APIs and
+                            optimizing database queries for increased efficiency.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                            <p class="tab-links" onclick="opentab(event, 'certification')">Certification</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Full Stack Developer</span><br>Designing & Building full dynamic web applications</li>
+                                <li><span>Advanced Java</span><br>Building web applications</li>
+                                <li><span>Spring-Boot Framework</span><br>For Building production ready applications</li>
+                                <li><span>Spring-MVC Framework</span><br>Model View Controller is used for web application</li>
+                                <li><span>Hibernate</span><br>For Handeling databases with Spring-Boot App</li>
+                                <li><span>MySql</span><br>Structured Query language for creating and Handeling databases</li>
+                                <li><span>HTML, CSS, JavaScript, ReactJS</span><br>For creating front-end web Applications</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Nov-2023 | Apr-2024</span><br>SoftwareEra Technologies, Pune</li><br>
+                                <p>• Designed and developed dynamic applications using java, Spring Boot, Hibernate ensuring smooth integration and functionality,Built and maintained RESTFUL API's for seamless communication between front-end & back-end. <br><br>
+                                    • Implemented agile project management processes in collaboration with project manager and Team lead resulting in a smooth project delivery in efficient time frame. <br><br>
+                                    • Reduced API response time by 40%, increasing user satisfaction scores by 25%. <br></p>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022–2024 | MCA</span><br>JSPM Institute of Management, Tathwade.</li>
+                                <li><span>2019–2022 | B.Sc</span><br>Arvind B Telang College Of Science, Nigdi.</li>
+                                <li><span>2018–2019 | 12th</span><br>Abhiman Jounior College, Nigdi.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="certification">
+                            <ul>
+                                <li><span>Java Full Stack Developer</span><br>Exponent It Services</li>
+                                <li><span>Introduction to Career Skills in Software Development</span><br>linkedin</li>
+                                <li><span>Databases for Developers: Foundations</span><br>Oracle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services" id="services"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Applications</h2>
+                    <p>Responsive & Dynamic web Applications.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database Handeling</h2>
+                    <p>Designing & creating databases.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>Cloud Support</h2>
+                    <p>Hosting Applications on a Cloud plaform.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1><br>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.JPG">
+                    <div class="layer">
+                        <h3>E-Tour App</h3>
+                        <p>Online tour booking and itinerary management.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.JPG">
+                    <div class="layer">
+                        <h3>Bank App</h3>
+                        <p>Secure transactions and user account management.</p>
+                        <a href="https://github.com/gunjan9599/Bank_Application_MVC"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.JPG">
+                    <div class="layer">
+                        <h3>Food App</h3>
+                        <p>Order online food.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:gunjanbarhate@gmail.com">gunjanbarhate@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i>+91-7387386975</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/gunjan_9599_"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/gunjan-barhate/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/gunjan9599"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/IZgunjan?s=09"><i class="fa-brands fa-twitter-square"></i></a>
+                    </div>
+                    <a href="images/cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © Gunjan. Made with <i class="fa-solid fa-heart"></i> love</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(event, tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        const sidemenu = document.getElementById("sidemenu");
+        const closeIcon = document.getElementById("close-icon");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+            closeIcon.style.display = "block";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+            closeIcon.style.display = "none";
+        }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyyJZm2NjJiAWiSGsvCBUXYOYPFnjYvJPW1iNeoGs9scWEaRwKf6_AQCk0hN1vAgyFg/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent!";
+                    setTimeout(() => msg.innerHTML = "", 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+
+</html>
